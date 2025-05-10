@@ -1,6 +1,6 @@
 CREATE TABLE order_status (
     order_status_id SERIAL PRIMARY KEY,
-    order_status_name VARCHAR(50) NOT NULL,
+    order_status_name VARCHAR(50) NOT NULL UNIQUE,
 
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),

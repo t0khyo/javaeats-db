@@ -1,6 +1,6 @@
 CREATE TABLE payment_integration_type (
     payment_integration_type_id SERIAL PRIMARY KEY,
-    payment_integration_type_name VARCHAR(50),
+    payment_integration_type_name VARCHAR(50) NOT NULL UNIQUE,
     
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
